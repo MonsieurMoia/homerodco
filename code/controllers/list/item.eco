@@ -1,0 +1,14 @@
+<div class="col-md-3 col-sm-6 col-xs-6">
+<figure >
+    <div class="productItem">
+        <img src="<%= @foto or 'https://s3.amazonaws.com/3vot.com/rodco/homerodco_13/assets/noimage.png'%>" alt="<%= @nombre %>">
+        <a class="brandLogo <%= @marca.toLowerCase() %>Logo" href="#<%= @marca.toLowerCase() %>" role="tab" data-toggle="tab" ></a>
+    </div>
+    <figcaption>
+        <h5><%= @nombre or "Producto no Tiene Nombre" %></h5>
+    	<p><%= @detalles or "Sin detalles" %><br>
+        <%= @descripcion or "Sin descripcion" %></p>
+    </figcaption>
+</figure>
+
+</div>

@@ -1,0 +1,502 @@
+body {
+	font-family: 'Open Sans';
+	background-color: #eaeaea;
+}
+.text-inverse {
+	color: #fff;
+}
+
+header {
+	background-color: #292929;
+}
+header .h5 {
+	font-weight: 600; 
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 2em;
+	position: relative;
+	top:.2em;
+}
+
+.logo {
+	background-image: url(*/assets/logo-rodco-anterior.png);
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	width: 100px;
+	height: 37px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin: .2em 0 0;
+}
+
+header a:hover {
+	text-decoration: none;
+	color: #e6e6e6;
+}
+
+#contacto {
+	position: absolute;
+	right:5em;
+}
+
+/*-----------
+CAROUSEL
+-----------*/
+
+.carousel-fade .carousel-inner .item{
+	opacity: 0;
+    transition-property: opacity;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+}
+.carousel-fade .carousel-inner .active {
+	opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+      opacity: 0;
+      z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+	 opacity: 1;
+}
+.carousel, 
+.carousel-inner,
+.carousel-inner .item {
+	-webkit-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+
+/*.carousel, */
+.carousel-inner, 
+.carousel-inner .item {
+	height: 450px;
+}
+.item:nth-child(1) {
+  background-image: url(*/assets/intro.png);
+}
+
+.item:nth-child(2) {
+  	background-image: url(*/assets/intro-yale.png);
+}
+
+.item:nth-child(3) {
+  	background-image: url(*/assets/intro-hilco.png);
+}
+
+/*Carousel Content*/
+.headerCont {
+	padding: 8em 0 0 0 ;
+	color: #fff;
+}
+.headerCont h2 {
+	margin: 0;
+	text-transform: uppercase
+}
+.headerCont h1 {
+	font-weight: 600;
+	font-size: 6em;
+	margin: 0;
+}
+.headerCont img {
+	width: 90%;
+}
+.headerCont a {
+	margin: 2em 0 0 ;
+}
+.headerCont button {
+	margin: 1em 0 0;
+	font-weight: 600;
+	font-size: 2em;
+}
+
+/*Buttons*/
+
+.btn {
+	border-radius: 0;
+	border: none;
+}
+.btn-primary, .btn-primary:hover {
+	background-color: #21608b;
+	color: #fff;
+}
+.btn-success, .btn-success:hover {
+	background-color: #99c66b;
+	color: #fff;
+}
+.btn-danger, .btn-danger:hover {
+	background-color: #ec6b58;
+	color: #fff;
+}
+
+
+/*Nav-tabs*/
+.brandNav {
+	text-align: center;	
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.brandNav li {
+	display: inline-block;
+	float: none;
+	background-color: #fff;
+	margin: 0 -5px 0 0;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.brandNav li a {
+	color: #000;
+	margin: 0;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.brandNav li.active a,
+.brandNav li.active:hover a{
+	color: #fff;
+} 
+/*#scroller {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    background: #CCC;
+    height: 100px;
+}*/
+#tab-rodco.active a{background-color: #21608b;}
+#tab-hilco.active a{background-color: #2d745b;}
+#tab-yale.active a{background-color: #f0ad4e;}
+#tab-condusal.active a{background-color: blue;}
+#tab-coflex.active a{background-color: blue;}
+#tab-tricircle.active a{background-color: blue;}
+#tab-plyco.active a{background-color: blue;}
+
+/*
+Products Section
+*/
+.products{
+	padding: 0 0 5em;
+	/*min-height: 50em;*/
+}
+.productsContainer {
+	/*border-left: 3px solid rgba(0,0,0,.05);*/
+	min-height: 10em;
+}
+.category {
+	color: #292929;
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 0;
+	text-transform: uppercase;
+}
+.category a, .category p {
+	display: block;
+	margin: 0;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 1em;
+	color: #292929;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	position: relative;
+}
+.category a {
+	background-color: #fff;
+}
+.category a img, .category p img{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 2.5em	
+}
+.category .glyphicon {
+	position: relative;
+	top: 8px;
+	font-weight: 400;
+	color: #ccc;
+	font-size: 12px;
+}
+
+.category:hover a {
+	background-color: #f7f7f7;
+	text-decoration: none;
+}
+.itemsAll {
+	background-color: #fff;
+	text-align: center;
+}
+/*.productItem {
+	text-align: left;
+	padding: .5em;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.productItem:hover {
+	background-color: #f7f7f7;
+	cursor: pointer;
+}
+.productItem:hover img {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.productItem div {
+	width: 100%;
+	height: 12em;
+	overflow: hidden;
+	background-color: #f7f7f7;
+	text-align: center;
+}
+.productItem img {
+	width: auto;
+	height: 100%;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.productItem figcaption {
+	padding: .8em;
+	font-weight: 600; 
+	background-color: #f7f7f7;
+}*/
+.products>.tab-content>.tab-pane {
+	margin: 1em 0;
+}
+
+/*-------------
+In category Products
+---------------*/
+.sidebarMenu {
+	background-color: #fff;
+	padding: 0 1em 1em;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.sidebarMenu .nav-tabs {
+	
+}
+.sidebarMenu .nav-tabs li{
+	display: block;
+	float: none;
+}
+.sidebarMenu .nav-tabs h4 {
+	padding: 1em 0 .5em;
+	color: #ccc;
+}
+.sidebarMenu .nav-tabs>li>a{
+	color: #4d4d4d;
+	padding:  .8em 1em;
+	font-weight: 500; 
+	font-size: 1.2em;
+	margin: 0;
+}
+.sidebarMenu .nav-tabs {
+	border: none;
+}
+.sidebarMenu .nav-tabs>li.active>a, 
+.sidebarMenu .nav-tabs>li.active>a:hover, 
+.sidebarMenu .nav-tabs>li.active>a:focus {
+	border: none;
+	font-weight: 700;
+	background-color: #f7f7f7;
+}
+
+/*------------
+Products 
+-------------*/
+.inCategoryProducts {
+	float: right
+}
+.productsContainer {
+	padding: 1em 0 3em
+}
+.inCategoryProducts figure,
+.productsContainer figure {
+	/*padding: .6em;*/
+	margin: .5em 0;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	overflow: hidden;
+	background-color: #fff;
+	padding-bottom: 1em;
+}
+
+.productsContainer figure img,
+.inCategoryProducts figure img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.productsContainer figure div,
+.inCategoryProducts figure div {
+	height: 11em;
+	width: 100%;
+	overflow: hidden;
+	background-color: #f7f7f7;
+	text-align: center;
+	position: relative;
+	background-image: url(*/assets/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.inCategoryProducts figure:hover,
+.productsContainer figure:hover  {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.inCategoryProducts figure:hover .brandLogo,
+.productsContainer figure:hover .brandLogo{
+	opacity: .8;
+}
+.productsContainer figure div .brandLogo,
+.inCategoryProducts figure div .brandLogo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5em;
+	height: 3em;
+	background-color: #fff;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	opacity: .5;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.brandLogo.yaleLogo { background-image: url(*/assets/yalelogo.png);}
+.brandLogo.hilcoLogo { background-image: url(*/assets/hilcologo.png);}
+
+.productsContainer figure figcaption,
+.inCategoryProducts figure figcaption {
+	padding: 1em;
+	height: 6em;
+}
+.productsContainer figure figcaption h5,
+.inCategoryProducts figure figcaption h5 {
+	font-weight: 600;
+	font-size: 1.2em;
+	margin: 0 0 .5em;
+}
+.productsContainer figure figcaption p, 
+.inCategoryProducts figure figcaption p {
+	font-size: .9em;
+	color: #7f7f7f;
+}
+.fade {
+	height: 0;
+	overflow: hidden;
+}
+
+.fade.in {
+	height: auto;
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #292929;
+	color: #e6e6e6;
+	position: relative;
+	text-align: center;
+	padding: 1.5em 0 4.5em;
+	-webkit-box-shadow: 0 -3em 30px rgba(234,234,234,.8);
+	box-shadow: 0 -3em 30px rgba(234,234,234,.8);
+}
+
+.contacto {
+	padding: .5em 2em;
+	border-bottom: 1px solid #f7f7f7;
+	font-size: 2em;
+	font-weight: 700;
+
+}
+.infocontacto {
+	padding: 2em;
+}
+footer span {
+	font-size:2em;
+	font-weight: 600;
+}
+
+
+
+
+/* ---- Isotope Filtering ---- */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #8CF;
+  color: #fff;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #8CF;
+}
+
+.button.is-checked {
+  color: white;
+}
+
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+
+/* ---- isotope ---- */
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+

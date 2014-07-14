@@ -1,0 +1,3 @@
+<figure class="element-item <%= @categoria.toLowerCase() %>">
+    <p><%= @nombre %></p>
+</figure>
