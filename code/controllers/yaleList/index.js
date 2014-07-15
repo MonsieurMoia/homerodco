@@ -1,6 +1,6 @@
 var fs = require("fs")
 
-var ItemTemplate = require("./item")
+var ItemTemplate = require("../hilcoList/item")
 
 var el;
 
@@ -15,10 +15,10 @@ function init(target){
 function render(){
 
 	var str = ""
-	var productosHilco = Product.findAllByAttribute("marca","HILCO");
+	var productosYale = Product.findAllByAttribute("marca","Yale");
 
-	for (var i = productosHilco.length - 1; i >= 0; i--) {
-		var product = productosHilco[i]
+	for (var i = productosYale.length - 1; i >= 0; i--) {
+		var product = productosYale[i]
 		str += ItemTemplate(product)
 	};
 
@@ -27,25 +27,24 @@ function render(){
 	//When Products are loaded, activate isotope
 
   	// init Isotope
-  	var $container = $('.isotope').isotope({
+  	var $container = $('.isotopeYale').isotope({
     	itemSelector: '.element-item',
     	layoutMode: 'fitRows'
   	});
 
   	// bind filter button click
-  	$('.filters').on( 'click', 'li', function() {
+  	$('.filtersYale').on( 'click', 'li', function() {
     	var filterValue = $( this ).attr('data-filter');
     	$container.isotope({ filter: filterValue });
   	});
   	// change is-checked class on buttons
-  	$('.button-group').each( function( i, buttonGroup ) {
+  	$('.button-group-Yale').each( function( i, buttonGroup ) {
     	var $buttonGroup = $( buttonGroup );
     	$buttonGroup.on( 'click', 'li', function() {
       		$buttonGroup.find('.is-checked').removeClass('is-checked');
       		$( this ).addClass('is-checked');
     	});
   	});
- 
 }
 
 module.exports = init;

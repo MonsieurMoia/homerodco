@@ -69,12 +69,13 @@
 
 <!-- Navigation by Brands -->
 <ul class="nav nav-tabs brandNav" role="tablist" id="scroller" >
+  <label for="">Buscar por marcas</label>
   <li class="active" id="tab-rodco"><a href="#rodco" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-home"> </span> RODCO</a></li>
   <li id="tab-hilco"><a href="#hilco" role="tab" data-toggle="tab">Hilco</a></li>
-  <!-- <li id="tab-yale"><a href="#yale" role="tab" data-toggle="tab">Yale</a></li>
+  <li id="tab-yale"><a href="#yale" role="tab" data-toggle="tab">Yale</a></li>
   <li id="tab-condusal"><a href="#condusal" role="tab" data-toggle="tab">Condusal</a></li>
   <li id="tab-coflex"><a href="#coflex" role="tab" data-toggle="tab">Coflex</a></li>
-  <li id="tab-tricircle"><a href="#tricircle" role="tab" data-toggle="tab">Tri-Circle</a></li>
+  <!--<li id="tab-tricircle"><a href="#tricircle" role="tab" data-toggle="tab">Tri-Circle</a></li>
   <li id="tab-plyco"><a href="#plyco" role="tab" data-toggle="tab">Plyco</a></li> -->
 </ul>
 <!-- //Navigation by Brands -->
@@ -92,33 +93,46 @@
       <!--//RODCO Tab-->
       <!--HILCO Tab-->
       <div class="tab-pane fade" id="hilco">
-        <div class="sidebar col-md-3">
-          <h1>RODCO</h1>
-          <div id="" class="filters button-group">
-            <button class="button is-checked" data-filter="*">Todos</button>
-            <button class="button" data-filter=".discos">Discos Abrasivos</button>
-            <button class="button" data-filter=".soldadura">Soldadura</button>
-            <button class="button" data-filter=".equipo">Equipo para soldar</button>
-          </div>
+        <div class="sidebarMenu col-md-3">
+          <h4><span class="glyphicon glyphicon-th-list"></span> Categorías de Productos</h4>
+          <ul id="" class="filters button-group">
+            <li class="button is-checked" data-filter="*">Todos</li>
+            <li class="button" data-filter=".discos">Discos Abrasivos</li>
+            <li class="button" data-filter=".soldadura">Soldadura</li>
+            <li class="button" data-filter=".equipo">Equipo para soldar</li>
+          </ul>
         </div>
-        <div class="isotope" style="width:60%; display: inline-block; height: auto!important" id="hilcoProducts">
-          <!-- <figure class="element-item discos abrasivos">Discos1</figure>
-          <figure class="element-item discos abrasivos">Discos2</figure>
-          <figure class="element-item discos abrasivos">Discos3</figure>
-          <figure class="element-item discos abrasivos">Discos4</figure>
-          <figure class="element-item discos abrasivos">Discos5</figure>
-          <figure class="element-item soldadura">Soldadura 1</figure>
-          <figure class="element-item soldadura">Soldadura 2</figure>
-          <figure class="element-item soldadura">Soldadura 3</figure>
-          <figure class="element-item soldadura">Soldadura 4</figure>
-          <figure class="element-item soldadura">Soldadura 5</figure>
-          <figure class="element-item equipo para soldar">Equipo para Soldar 1</figure>
-          <figure class="element-item equipo para soldar">Equipo para Soldar 2</figure>
-          <figure class="element-item equipo para soldar">Equipo para Soldar 3</figure>
-          <figure class="element-item equipo para soldar">Equipo para Soldar 4</figure> -->
-        </div> 
+        <div class="col-md-9 inCategoryProducts">
+          <div class="isotope" id="hilcoProducts"></div> 
+        </div>
+        
       </div>
       <!--//HILCO Tab-->
+      <!--YALE Tab-->
+      <div class="tab-pane fade" id="yale">
+        <div class="sidebarMenu col-md-3">
+          <h4><span class="glyphicon glyphicon-th-list"></span> Categorías de Productos</h4>
+          <ul id="" class="filtersYale button-group-Yale">
+            <li class="button is-checked" data-filter="*">Todos</li>
+            <li class="button" data-filter=".candados">Candados</li>
+            <li class="button" data-filter=".llavines">Llavines</li>
+            <li class="button" data-filter=".cierra">Cierrapuertas</li>
+            <li class="button" data-filter=".equipo">Equipo Especial de Seguridad</li>
+            <li class="button" data-filter=".digital">Digital</li>
+            <li class="button" data-filter=".cerraduras">Cerraduras</li>
+          </ul>
+        </div>
+        <div class="col-md-9 inCategoryProducts">
+          <h5 class="category">
+            YALE
+            <img src="*/assets/logo-yale.png" alt=""><span class="glyphicon glyphicon-chevron-down pull-right"></span>
+          </h5>
+          <div class="isotopeYale" id="yaleProducts"></div> 
+        </div>
+        
+      </div>
+      <!--//YALE Tab-->
+    
     </div><!--//Row-->
   </div><!-- //Tab Content-->   
 </section>

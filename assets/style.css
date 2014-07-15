@@ -141,10 +141,14 @@ CAROUSEL
 	background-color: #fff;
 	position: relative;
 	width: 100%;
-	z-index: 1;
+	z-index: 6;
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
+}
+.brandNav label {
+	margin: 0 .5em 0 0;
+	color: #4d4d4d;
 }
 .brandNav li {
 	display: inline-block;
@@ -176,7 +180,7 @@ CAROUSEL
 }*/
 #tab-rodco.active a{background-color: #21608b;}
 #tab-hilco.active a{background-color: #2d745b;}
-#tab-yale.active a{background-color: #f0ad4e;}
+#tab-yale.active a{background-color: #fce242;}
 #tab-condusal.active a{background-color: blue;}
 #tab-coflex.active a{background-color: blue;}
 #tab-tricircle.active a{background-color: blue;}
@@ -274,6 +278,11 @@ Products Section
 }*/
 .products>.tab-content>.tab-pane {
 	margin: 1em 0;
+	position: relative;
+	z-index: 7;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
 
 /*-------------
@@ -285,36 +294,41 @@ In category Products
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
+	opacity: .6;
+	border-radius: 6px;
 }
-.sidebarMenu .nav-tabs {
-	
+.sidebarMenu:hover {
+	opacity: 1;
 }
-.sidebarMenu .nav-tabs li{
-	display: block;
-	float: none;
-}
-.sidebarMenu .nav-tabs h4 {
-	padding: 1em 0 .5em;
+.sidebarMenu h4 {
+	font-size: 1.2em;
+	padding: .8em 1em;
 	color: #ccc;
 }
-.sidebarMenu .nav-tabs>li>a{
+.sidebarMenu ul {
+	margin: 0;
+	padding: 0;
+}
+.sidebarMenu li{
+	display: block;
+	float: none;
 	color: #4d4d4d;
 	padding:  .8em 1em;
 	font-weight: 500; 
 	font-size: 1.2em;
 	margin: 0;
+	cursor: pointer;
+	-webkit-transition: all 180ms ease-in-out;
+	-o-transition: all 180ms ease-in-out;
+	transition: all 180ms ease-in-out;
 }
-.sidebarMenu .nav-tabs {
-	border: none;
-}
-.sidebarMenu .nav-tabs>li.active>a, 
-.sidebarMenu .nav-tabs>li.active>a:hover, 
-.sidebarMenu .nav-tabs>li.active>a:focus {
+.sidebarMenu li.is-checked, 
+.sidebarMenu li:hover, 
+.sidebarMenu li:focus {
 	border: none;
 	font-weight: 700;
 	background-color: #f7f7f7;
 }
-
 /*------------
 Products 
 -------------*/
@@ -322,18 +336,18 @@ Products
 	float: right
 }
 .productsContainer {
-	padding: 1em 0 3em
+	padding: 1em 0 3em;
+	min-height: 35em;
 }
 .inCategoryProducts figure,
 .productsContainer figure {
-	/*padding: .6em;*/
-	margin: .5em 0;
-	-webkit-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	
 	overflow: hidden;
-	background-color: #fff;
-	padding-bottom: 1em;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.1),2px 2px 8px rgba(0,0,0,0.1), inset 0 -5px 5px rgba(255,255,255,.2);
+	margin: 0 3.5% 1em 0;
+	vertical-align: top;
 }
 
 .productsContainer figure img,
@@ -341,9 +355,10 @@ Products
 	max-width: 100%;
 	max-height: 100%;
 }
+
 .productsContainer figure div,
 .inCategoryProducts figure div {
-	height: 11em;
+	height: 12em;
 	width: 100%;
 	overflow: hidden;
 	background-color: #f7f7f7;
@@ -378,6 +393,7 @@ Products
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
+	cursor: pointer;
 }
 .brandLogo.yaleLogo { background-image: url(*/assets/yalelogo.png);}
 .brandLogo.hilcoLogo { background-image: url(*/assets/hilcologo.png);}
@@ -385,7 +401,7 @@ Products
 .productsContainer figure figcaption,
 .inCategoryProducts figure figcaption {
 	padding: 1em;
-	height: 6em;
+	height: 7em;
 }
 .productsContainer figure figcaption h5,
 .inCategoryProducts figure figcaption h5 {
@@ -401,10 +417,56 @@ Products
 .fade {
 	height: 0;
 	overflow: hidden;
+	z-index: 1;
+	position: relative;
 }
 
 .fade.in {
 	height: auto;
+	z-index: 3;
+}
+
+/*----------
+Products inside Category
+-----------*/
+.inCategoryProducts .category {
+	background-color: #fff;
+	display: block;
+	margin: 0;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 1em;
+	color: #292929;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	position: relative;
+}
+.inCategoryProducts .category img {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 2.5em	
+}
+/*.category .glyphicon {
+	position: relative;
+	top: 8px;
+	font-weight: 400;
+	color: #ccc;
+	font-size: 12px;
+}*/
+.inCategoryProducts figure {
+	width: 29.6%;
+}
+.inCategoryProducts figure img {
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.inCategoryProducts figure:hover img {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 
@@ -418,6 +480,8 @@ footer {
 	padding: 1.5em 0 4.5em;
 	-webkit-box-shadow: 0 -3em 30px rgba(234,234,234,.8);
 	box-shadow: 0 -3em 30px rgba(234,234,234,.8);
+	position: relative;
+	z-index: 8;
 }
 
 .contacto {
@@ -445,53 +509,13 @@ footer span {
           box-sizing: border-box;
 }
 
-/* ---- button ---- */
-
-.button {
-  display: inline-block;
-  padding: 0.5em 1.0em;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.button:hover {
-  background-color: #8CF;
-  color: #fff;
-}
-
-.button:active,
-.button.is-checked {
-  background-color: #8CF;
-}
-
-.button.is-checked {
-  color: white;
-}
-
-
-/* ---- button-group ---- */
-
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.button-group .button {
-  float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px;
-}
-
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
-
 /* ---- isotope ---- */
-
+.isotope {
+	padding: 1em 0 0;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
 /* clear fix */
 .isotope:after {
   content: '';

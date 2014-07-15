@@ -13,10 +13,10 @@
 	},
 	"name": "homerodco",
 	"description": "",
-	"version": "0.0.19",
+	"version": "0.0.22",
 	"threevot": {
 		"user_name": "rodco",
-		"version": "19",
+		"version": "22",
 		"displayName": "homerodco",
 		"size": "small",
 		"screens": {
